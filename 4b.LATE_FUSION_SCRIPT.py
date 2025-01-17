@@ -772,7 +772,7 @@ with torch.no_grad():
         total += len(labels)
         correct += (labels == predicted).sum()
         
-# ---------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------
         img_paths = img_paths[2]
         indices_wrong = torch.nonzero(predicted != labels).squeeze().tolist()
         #print('wrong',indices_wrong)
@@ -780,7 +780,7 @@ with torch.no_grad():
             indices_wrong = [indices_wrong]
         for idx in indices_wrong:
             misclassified_test_paths.append(img_paths[idx])
-# ----------------------------------------------------------------------------------------------------------- 
+# ------------------------------------------------------------------------------------------------------------ 
 
 print(f"\nCorrect: {correct}, Total: {total}")
 print(f"Net2 - Test accuracy: {100*correct/total:.2f}\n")

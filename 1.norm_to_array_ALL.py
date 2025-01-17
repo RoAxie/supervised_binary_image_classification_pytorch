@@ -99,5 +99,4 @@ plt.tight_layout()
 plt.subplots_adjust(top=0.85)
 plt.savefig(output_image_path, bbox_inches='tight')
 print(f"Image saved as '{output_image_path}'")
-
 plt.show()

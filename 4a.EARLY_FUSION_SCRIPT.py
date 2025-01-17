@@ -389,7 +389,7 @@ with torch.no_grad():
         outputs = net(imgs)
         predicted = prediction(outputs, method)  # Get predictions
 
-# ---------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------
         indices_wrong = torch.nonzero(predicted != labels).squeeze().tolist() # Find misclassified samples
         #print('wrong',indices_wrong)
         if type(indices_wrong) is int:
@@ -397,7 +397,7 @@ with torch.no_grad():
         for idx in indices_wrong:
             for img_path in img_paths:
                 misclassified_test_paths.append(img_path[idx])
-# ----------------------------------------------------------------------------------------------------------- 
+# ------------------------------------------------------------------------------------------------------------ 
 
         # Update counters for accuracy calculation
         total += len(labels)

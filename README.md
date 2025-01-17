@@ -20,7 +20,7 @@ Directory structure:
 </blockquote>   
   
 
-<u>Workflow:</u> 
+Workflow: 
 
 `norm_to_array_ALL.py`: All files were extracted and normalized to facilitate processing by CNNs. My project began with the conversion of normalized data, saving the sparse matrices as .npz files.    
 
